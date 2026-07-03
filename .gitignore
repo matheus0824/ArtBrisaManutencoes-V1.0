@@ -1,0 +1,9 @@
+# Ocultar o arquivo de conexão real com as senhas do banco
+conexao.php
+
+# Ocultar pastas de configuração do VS Code
+.vscode/
+
+# Ocultar arquivos temporários do sistema operacional
+Thumbs.db
+.DS_Store
