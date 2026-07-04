@@ -8,7 +8,11 @@ $stmt = $conexao->prepare("SELECT * FROM equipamentos");
 $stmt->execute();
 
 $equipamentos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
 
+<link rel="stylesheet" href="style.css">
+
+<?php
 echo "<table>";
 echo    "<tr>";
 echo        "<th>Nº da Máquina</th>";
