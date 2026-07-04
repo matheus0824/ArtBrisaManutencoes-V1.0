@@ -9,12 +9,28 @@ $stmt->execute();
 
 $equipamentos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+echo "<table>";
+echo    "<tr>";
+echo        "<th>Nº da Máquina</th>";
+echo        "<th>Tipo Equipamento</th>";
+echo        "<th>Data da última limpeza</th>";
+echo    "</tr>";
+
+
+
 foreach ($equipamentos as $equipamentoIndividual) {
-    echo $equipamentoIndividual['num_maquina'] . " - ";
-    echo $equipamentoIndividual['tipo_equipamento'] . " - ";
-    echo $equipamentoIndividual['status'] . "<br>";
+    echo "<tr>";
+
+    echo "<td>" . $equipamentoIndividual['num_maquina'] . "</td>";
+    echo "<td>" . $equipamentoIndividual['tipo_equipamento'] . "</td>";
+    echo "<td>" . $equipamentoIndividual['status'] . "</td>";
+
+    echo "</tr>";
 };
 
+echo "</table>";
+
+?>
 
 
 
