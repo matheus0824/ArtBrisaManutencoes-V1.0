@@ -3,7 +3,7 @@ require_once 'conexao.php';
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-$stmt = $conexao->prepare("SELECT * FROM equipamentos");
+$stmt = $conexao->prepare("SELECT * FROM equipamentos ORDER BY status DESC, id DESC");
 
 $stmt->execute();
 
@@ -23,12 +23,36 @@ echo    "</tr>";
 
 
 foreach ($equipamentos as $equipamentoIndividual) {
+    $data_manutencao = new DateTime($equipamentoIndividual['status']);
+    $hoje = new DateTime();
+
+    $diferenca = $data_manutencao->diff($hoje);
+
+    $total_meses = ($diferenca->y * 12) + $diferenca->m;
+
+    if ($total_meses >= 3) {
+        $classe_bolinha = "vermelha";
+    } else {
+        $classe_bolinha = "verde";
+    }
+
+    $data_formatada = $data_manutencao->format('d/m/Y');
+
     echo "<tr>";
 
     echo "<td>" . $equipamentoIndividual['num_maquina'] . "</td>";
+
     echo "<td>" . $equipamentoIndividual['tipo_equipamento'] . "</td>";
-    echo "<td>" . date('d/m/Y', strtotime($equipamentoIndividual['status'])). "</td>";
+
+
+    echo "<td>
+        <div class='status-container'>
+            <span class='bolinha $classe_bolinha'></span>
+            $data_formatada
+        </div>
+    </td>";
     
+
     echo "</tr>";
 };
 
