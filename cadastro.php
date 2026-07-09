@@ -6,6 +6,11 @@
     <title>Document</title>
 </head>
 <body>
+    <?php
+    include 'header.php';
+    ?>    
+
+
     <form action="inserir.php" method="post">
         <input type="text" name="num_maquina" placeholder="Digite o ID da máquina">
 
