@@ -1,7 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     font-family: Arial, sans-serif;
     background-color: #939393;
-    padding: 20px;
 }
 
 table {
@@ -34,6 +39,8 @@ tr:hover {
     justify-content: space-between;
     align-items: center;
     background-color: #003366;
+    width: 100%;
+    padding: 10px;
 }
 .nav-links{
     display: flex;
