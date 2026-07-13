@@ -32,10 +32,9 @@ foreach ($equipamentos as $equipamentoIndividual) {
     echo "<td>" . date('d/m/Y', strtotime($equipamentoIndividual['status'])). "</td>";
     
     echo "<td>";
-        echo " <a href='excluir.php?id=" . $equipamentoIndividual['id'] . "'>Excluir</a> |";
+        echo "<a href='excluir.php?id=" . $equipamentoIndividual['id'] . "' class='btn-acao btn-excluir'><img src='img/lixeira.png' alt='Excluir'></a>";
 
-        echo " <a href='editar.php?id=" . $equipamentoIndividual['id'] . "'>Editar</a>";
-        echo "</td>";
+      echo "<a href='editar.php?id=" . $equipamentoIndividual['id'] . "' class='btn-acao btn-editar'><img src='img/editar.png' alt='Editar'></a>";
 
     echo "</tr>";
 };
