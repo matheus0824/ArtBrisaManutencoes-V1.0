@@ -7,7 +7,7 @@
 </head>
 <body>
     <?php
-    include 'header.php';
+    include 'includes/header.php';
     ?>  
 
 <div class="cadastro-container">
@@ -33,7 +33,7 @@
         <label>Data da última limpeza:</label>
         <input type="date" name="status" placeholder="Digite a data da última limpeza">
         </div>
-        
+
         <button type="submit">Cadastrar</button>
 
     </form>

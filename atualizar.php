@@ -1,5 +1,5 @@
 <?php
-require_once 'conexao.php';
+require_once 'config/conexao.php';
 
 $id = $_POST['id'];
 $num_maquina = $_POST['num_maquina'];
