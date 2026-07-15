@@ -40,7 +40,7 @@ tr:hover {
     align-items: center;
     background-color: #003366;
     width: 100%;
-    padding: 10px;
+    padding: 10px 40px;
 }
 .nav-links{
     display: flex;
@@ -131,4 +131,52 @@ img {
   text-decoration: none;
   transition: background-color 0.3s ease;
   background-color: #ffffff;
+}
+
+/*FORMULÁRIO DE CADASTRO DE MÁQUINAS*/
+.cadastro-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    
+}
+.cadastro-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.cadastro-container input[type="text"],
+.cadastro-container input[type="date"]
+ {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+.campo-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.campo-grupo label {
+    font-weight: bold;
+    color: #333333;
+}
+.cadastro-container select{
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+.cadastro-container button {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 16px;
+    display: flex;
+    width: 25%;
+    justify-content: center;
 }
