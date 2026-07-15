@@ -28,9 +28,12 @@
             <option value="Portátil">Portátil</option>
         </select>
         </div>
-    
-        <input type="date" name="status">
 
+        <div class="campo-grupo">
+        <label>Data da última limpeza:</label>
+        <input type="date" name="status" placeholder="Digite a data da última limpeza">
+        </div>
+        
         <button type="submit">Cadastrar</button>
 
     </form>
