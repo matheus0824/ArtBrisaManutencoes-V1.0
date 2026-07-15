@@ -8,23 +8,35 @@
 <body>
     <?php
     include 'header.php';
-    ?>    
+    ?>  
 
+<div class="cadastro-container">
+    <h2>Cadastro de Equipamentos</h2>
 
     <form action="inserir.php" method="post">
+        
+    <div class="campo-grupo">
+        <label> ID da Máquina:</label>
         <input type="text" name="num_maquina" placeholder="Digite o ID da máquina">
-
+    </div>
+    
+        <div class="campo-grupo">
+            <label>Tipo de Equipamento:</label>
         <select name="tipo_equipamento">
             <option value="Climatizador">Climatizador 160/170</option>
             <option value="Exaustor">Exaustor</option>
             <option value="Portátil">Portátil</option>
         </select>
-
+        </div>
+    
         <input type="date" name="status">
 
         <button type="submit">Cadastrar</button>
 
     </form>
+</div>
+
+    
     
 </body>
 </html>
