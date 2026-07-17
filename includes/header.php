@@ -10,5 +10,7 @@
         <li><a href="cadastro.php">CADASTRO</a></li>
         <li><a href="listar.php">MÁQUINAS</a></li>
         <li><a href="dashboard_manutencao.php">MANUTENÇÔES</a></li>
+        <li><a href="listar_produtos.php">PEÇAS FALTANDO</a></li>
+        <li><a href="cadastro_produto.php">CADASTRO DE PEÇAS FALTANDO</a></li>
     </ul>
 </nav>
